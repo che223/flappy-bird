@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Lora';
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/lora/v15/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-MoFoq92mQ.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/lora/v15/0QI6MX1D_JOuGQbT0gvTJPa787weuxJBkqg.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/lora/v15/0QI6MX1D_JOuGQbT0gvTJPa787z5vBJBkqg.ttf) format('truetype');
+  }
+  @font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1591317456693'); /* IE9 */
+    src: url('iconfont.eot?t=1591317456693#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALIAAsAAAAABsQAAAJ6AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBTIE/ATYCJAMICwYABCAFhG0HMxvoBSMRdmLtaZL988Bu+EgYuZmK68QR4wXN60VFiH9bBMLUBP85eJ7W8X/uzOw+mFH2lzJZIUUwMrMZcTc369saFWGYkvPgf/mOdALhQviBpVwP6Il8yQLA57mc3gQ6kGt8oBzX3jSpF2AcUKB7YBTZBXQA3DB2E8EDfA0B3ImWSarmpi5cMYBNAsiiPDuOayGJwTgVVwS74aRB9mLhqrapx4o9/PfyecwVFJYG9LTNVE9R9q4c1ui1zlqGKEEKBOO8BWggExiQrsZiCxpxOI170RCPY3UKvCt3HOpGjvrnITag3ROASF35TCqsflQxFQAGsIFSUDMpBrYnINyWLwz32nFh3Xl3z+1n155bTP1JXmcq0T7Pk5mQaw7d3nF33Z3tt/r2iZ4Fi85/S9JWf7O4NWmLfmT7fX/5lh1+4boqV7Plp8f5ckhc8JM/qi8vFCnY+XIjRBlI623q7d8Uh0/uR/6PruipXD0MAC+cm8+53TAsrHA9Z0jg36kGTphYA1zKhKrGqqKUfU997rgDjhn192aqNehG/YJrQeVA4UIUNK4kkobNhIUHWbBxpRTuZKg970GAFWjEuAHpNmkQfF2Bwpu70Ph6Qhr2NSyCfYWNbxru9EjAjR4k9zDrSkYj6MH+ITvaA/KIFp13jNdqOK/h/Bv5zBkY2r5cWXBHXmLP+YmjSIDAtMGsvYfrSnAwFXTSJpFj6rrQ9KXW0aa0qmQ0gh7sH7KjPdDZoivC3zFeq+GOsZHiG/nMi8PQ9gPIxbgPGnuUT85PHEUCBKYNZm0ZrivB0bysoJM2TcgfUwenhaHGdnvz9nfnAHcFbOoGD2jcIu7RX9SMSgEAAA==') format('woff2'),
+    url('iconfont.woff?t=1591317456693') format('woff'),
+    url('iconfont.ttf?t=1591317456693') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1591317456693#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-gengduo-2:before {
+    content: "\e641";
+  }
+  
+  
+body{
+    background: url(../images/06.jpg) no-repeat;
+    background-size: cover;
+}
+.header .nav{
+    display: flex;
+    flex-direction: row-reverse
+}
+.header .nav li{
+    margin-top: 40px;
+    margin-left: 80px;
+}
+.header .nav li a{
+ font-size: 30px;
+  color:black;
+  font-weight: 400;
+  font-family: Lora, serif;
+  white-space: pre;
+  transition: 0.5s;
+}
+.header .nav li a:hover{
+  color:blue;
+}
+.header .nav li:nth-child(1){
+    margin-right: 50px;
+}
+.slide-bar {
+  position: relative;
+  color: transparent;
+  animation: fill-text-white 2s 1.6s forwards;
+}
+.slide-bar::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: slide-in-out 2s cubic-bezier(0.75, 0, 0, 1) forwards;
+}
+@keyframes slide-in-out {
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+@keyframes fill-text-white {
+  to {
+    color:white;
+  }
+}
+.content{
+    height: 100vh;
+    display: flex;
+}
+.middle {
+    flex-grow: 1;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.left {
+    order: -1;
+    flex: 0 1 200px;
+    margin-right: 20px;
+    height: 100vh;
+}
+.right {
+    flex: 0 1 200px;
+        margin-left: 20px;
+    height: 100vh;
+}
+.menu {
+    margin-top: 200px;
+    margin-left: 100px;
+    width: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.item {
+    overflow: hidden;
+}
+.btn {
+    display: block;
+    padding: 16px 20px;
+    background:black;
+    color: white;
+    position: relative;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background:black;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+.btn i {
+    margin-right: 10px;
+}
+.smenu{
+    background: #333;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    max-height: 0;
+}
+.smenu a {
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+.smenu a:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #3498db;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.smenu a:hover::before {
+    opacity: 1;
+}
+.item:target .smenu {
+    max-height: 10em;
+}
+header .title,
+header .subtitle {
+  width: 250px;
+  height: 30px;
+}
+header .title {
+  margin: 0;
+  font-family: Lora, serif;
+  font-size: 40px;
+  line-height: 30px;
+}
+header .title::before {
+  background: brown;
+}
+header .subtitle {
+  margin: 10px 0 0 0;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  animation-delay: 3.2s;
+}
+header .subtitle::before {
+  background: blue;
+  animation-delay: 2s;
+}
